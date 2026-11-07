@@ -13,7 +13,9 @@ dependencies = [
     "requests>=2.32.0",
     "typing-extensions>=4.13",
     "typer>=0.15.2",
-    "litellm>=1.71.1,<=1.82.0",
+    "litellm>=1.71.1,<1.109,!=1.82.7,!=1.82.8",
+    # litellm 1.106+ imports mcp 2.x when completion() gets tools, even without MCP
+    "mcp>=2.2,<3",
     "weave>=0.54.0",
     "polars>=1.26.0",
     "tblib>=3.0.0",
